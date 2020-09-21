@@ -8,16 +8,16 @@ env:
   IMAGE_NAME: flaska
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+#   test:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Run tests
-        run: docker build . --file ./app/Dockerfile
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Run tests
+#         run: docker build . --file ./app/Dockerfile
 
   push:
-    needs: test
+#     needs: test
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
